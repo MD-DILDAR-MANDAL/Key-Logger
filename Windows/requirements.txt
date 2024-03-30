@@ -1,0 +1,6 @@
+pyinput==0.3.2
+pynput==1.7.6
+python-xlib==0.33
+pywin32==306
+pyxhook==1.0.0
+six==1.16.0
