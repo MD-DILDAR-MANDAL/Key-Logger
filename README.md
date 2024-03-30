@@ -39,6 +39,52 @@ It utilizes the `pyxhook` library to monitor keyboard events.
 
 ## For Windows
 
+## Features
+
+- Hides console window during execution.
+- Logs keystrokes to a specified file.
+- Includes a kill switch to stop the keylogging process.
+
+## Requirements
+
+- Python 3.x
+- pynput
+- pywin32
+
+## Installation
+
+1. Clone the repository:
+
+    ```
+    git clone https://github.com/md-dildar-mandal/Key-Logger.git
+    ```
+
+2. Navigate to the project directory:
+
+    ```
+    cd Key-Logger/Windows
+    ```
+
+3. Install the required dependencies:
+
+    ```
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+1. Run the keylogger script:
+
+    ```
+    python w_main.py
+    ```
+
+2. To stop the keylogging process, press the Escape key.
+
+## Configuration
+
+- You can modify the log file path by changing the `log_file` variable in the `w_main.py` script.
+
 ## Security and Privacy
 
 - **Warning**: Please use this script responsibly and only on your own devices. Keyloggers can be considered intrusive and unethical if used without consent.
